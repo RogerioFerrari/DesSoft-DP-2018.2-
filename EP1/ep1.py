@@ -19,7 +19,6 @@ while True:
     print('3 - Remover Item da comanda')
     print('4 - Imprimir Comanda')
     escolha = input('Faça sua escolha: ')
-
     if escolha=='0':
         print('\nAté mais')
         break
