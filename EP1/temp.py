@@ -5,7 +5,6 @@ Spyder Editor
 This is a temporary script file.
 """
 
-
 import json 
 cardapio = dict()
 comanda = dict()
@@ -13,7 +12,9 @@ comanda = dict()
 try:
    with open('cardapio.txt','r') as cardapio:
     cardapio = json.loads(cardapio.read())
-
+   with open('comanda.txt','r') as comanda:
+    comanda = json.loads(comanda.read())
+    
 except: FileNotFoundError
 
 
@@ -148,6 +149,7 @@ while loop1:
                                         print('\nQuantidade atual de {0}: {1}'.format(nome_produto, comanda[nome_produto]))
                                         loop = False
                                         break
+                                
                 if escolha12=='3':
                     if len(comanda)==0:
                         print('\nA comanda está vazia')
